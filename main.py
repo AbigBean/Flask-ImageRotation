@@ -15,8 +15,6 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 if not os.path.exists(UPLOAD_FOLDER):
     os.mkdir(UPLOAD_FOLDER)
 
-print(_basedir)
-print(UPLOAD_FOLDER)
 
 @app.route("/", methods=['GET', 'POST'])
 def index():
