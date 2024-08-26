@@ -29,7 +29,7 @@ def index():
 @app.route("/edit_file", methods=['POST'])
 def edit_file():
     file = request.files['uploadedFile']
-    file_ext = file.filename.split(".")[1]               #FIX THE BUg NAME Exmpl: Logo.pngjdvnjbvbfvjb.png
+    file_ext = file.filename.split(".")[1]
     rotation = int(request.form['integerValue'])
 
     if file.mimetype not in ['image/jpeg', 'image/png', 'image/jpg']:
