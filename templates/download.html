@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Download{% endblock %}
+
+{% block content %}
+  <main class="px-2">
+    <p></p>
+    <p></p>
+    <p></p>
+    <h1>Downloading your image</h1>
+    <a href="{{ url_for('download', filename=filename, extn=extn) }}" class="btn btn-primary">Download File</a>
+    <p></p>
+    <p></p>
+    <p></p>
+  </main>
+{% endblock %}

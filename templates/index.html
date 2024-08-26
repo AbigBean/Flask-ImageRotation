@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+<main class="container my-5">
+    <div class="text-center">
+        <h1 class="display-4">Rotate Your Photo</h1>
+        <p class="lead">Upload a JPEG or PNG image to rotate it by a specified degree.</p>
+    </div>
+
+    <div class="card mx-auto shadow-sm" style="max-width: 600px;">
+        <div class="card-body">
+            <form method="POST" action="{{ url_for('edit_file') }}" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="fileInput" class="form-label">Upload an Image:</label>
+                    <input type="file" name="uploadedFile" class="form-control" id="fileInput" accept=".jpg, .jpeg, .png" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="integerInput" class="form-label">Enter Rotation Degree (Integer):</label>
+                    <input type="number" id="integerInput" name="integerValue" class="form-control" placeholder="e.g., 90" required>
+                </div>
+
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+{% endblock %}
